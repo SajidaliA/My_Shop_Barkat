@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mData"
+            type="com.peacetechsolution.myshopbarkat.data.model.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="12dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/viewOutOfStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    android:elevation="@dimen/_1sdp"
+                    android:background="@color/white99"
+                    app:layout_constraintTop_toTopOf="@id/img_banner"
+                    app:layout_constraintBottom_toBottomOf="@id/img_banner"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_banner"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_105sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/cover_placeholder" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_veg_price"
+                    style="@style/black12bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Redmi Note 9 Pro Max Cover"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOffer"
+                    app:layout_constraintStart_toEndOf="@+id/img_banner"
+                    app:layout_constraintTop_toTopOf="@+id/img_banner" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_veg_name"
+                    style="@style/black10alpha7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Beautiful cover with soft rubber, Rounded Corner, gold border with extra "
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView_veg_price"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_veg_price" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQty"
+                    android:layout_width="0dp"
+                    style="@style/black10"
+                    android:layout_height="wrap_content"
+                    android:text="Qty: 15"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_veg_price"
+                    app:layout_constraintStart_toStartOf="@+id/textView_veg_price"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_veg_name" />
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCostPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/accent12Bold"
+                    android:text="\u20b9 170-"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:layout_constraintStart_toEndOf="@+id/img_banner"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/primary12Bold"
+                    android:text="\u20b9 250"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tvCostPrice"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOutOfStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/white8bold"
+                    android:elevation="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:background="@drawable/red_solid_bg_round"
+                    android:text="@string/out_of_stock"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/white8bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:background="@drawable/main_solid_bg_round"
+                    android:text="FLAT \u20b9 50 OFF"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

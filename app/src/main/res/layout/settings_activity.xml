@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCategories"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_textview"
+        android:padding="@dimen/_14sdp"
+        android:text="@string/categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCategoryNo"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:text="12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCategories"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategories" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:alpha="0.5"
+        android:rotation="-90"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCategories" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReminder"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_textview"
+        android:padding="@dimen/_14sdp"
+        android:text="@string/reminder_for_stock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReminderQty"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:text="Less then 5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvReminder"
+        app:layout_constraintBottom_toBottomOf="@id/tvReminder" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:alpha="0.5"
+        android:rotation="-90"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/tvReminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvReminder" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHistory"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_textview"
+        android:padding="@dimen/_14sdp"
+        android:text="@string/show_history_to_customer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReminder" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHistoryFor"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:text="For last 30 days"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHistory"
+        app:layout_constraintBottom_toBottomOf="@id/tvHistory" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:alpha="0.5"
+        android:rotation="-90"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/tvHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHistory" />
+</androidx.constraintlayout.widget.ConstraintLayout>
