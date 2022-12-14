@@ -34,7 +34,7 @@ class ProductAdapter(
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bind(userList[position])
-        holder.binding.imgBanner.clickWithDebounce {
+        holder.binding.cardMain.setOnClickListener {
             clickInterface.itemClick(position)
         }
         if (position != 0 && position %3 == 0){

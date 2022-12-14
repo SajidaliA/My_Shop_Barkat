@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_dialog"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHistoryLabel"
+        style="@style/black10alpha7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/show_history_to_customer"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLast30Days"
+        style="@style/black12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/last_30_days"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLast6Months"
+        style="@style/black12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/last_6_months"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLast1Year"
+        style="@style/black12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/last_1_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvShowAll"
+        style="@style/black12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/show_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvApplyFilter"
+        style="@style/white16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryBorder"
+        android:clickable="true"
+        android:focusable="true"
+        android:enabled="false"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:foreground="@drawable/ripple_tab"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/apply"
+        android:textAlignment="center" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -6,6 +6,11 @@
 
     <FrameLayout
         android:id="@+id/container_settings"
+        android:elevation="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -17,7 +22,7 @@
         android:background="@drawable/bottom_line"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="@drawable/ripple_textview"
+        android:foreground="@drawable/ripple_with_corner"
         android:padding="@dimen/_14sdp"
         android:text="@string/categories"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +60,7 @@
         android:background="@drawable/bottom_line"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="@drawable/ripple_textview"
+        android:foreground="@drawable/ripple_with_corner"
         android:padding="@dimen/_14sdp"
         android:text="@string/reminder_for_stock"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +98,7 @@
         android:background="@drawable/bottom_line"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="@drawable/ripple_textview"
+        android:foreground="@drawable/ripple_with_corner"
         android:padding="@dimen/_14sdp"
         android:text="@string/show_history_to_customer"
         app:layout_constraintEnd_toEndOf="parent"

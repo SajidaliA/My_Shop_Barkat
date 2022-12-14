@@ -18,7 +18,7 @@ import com.peacetechsolution.myshopbarkat.util.hide
 import com.peacetechsolution.myshopbarkat.util.show
 
 
-class HomeFragment : BaseFragment(), BottomSheetPostSelection.OnTypeClickListener {
+class HomeFragment : BaseFragment(), BottomSheetPostSelection.OnTypeClickListener, BottomSheetFilter.OnFilterApplyClickListener {
 
     private lateinit var mBinding: FragmentHomeBinding
 
@@ -69,6 +69,20 @@ class HomeFragment : BaseFragment(), BottomSheetPostSelection.OnTypeClickListene
                     }
                 }
             }
+            ivFilter.setOnClickListener {
+                openFilterBS()
+            }
+        }
+    }
+
+    private fun openFilterBS() {
+        activity?.supportFragmentManager?.let { frm ->
+            val bottomSheet =
+                BottomSheetFilter.newInstance(this)
+            bottomSheet.let {
+                it.isCancelable = true
+                it.show(frm, BottomSheetFilter::class.java.simpleName)
+            }
         }
     }
 
@@ -101,6 +115,10 @@ class HomeFragment : BaseFragment(), BottomSheetPostSelection.OnTypeClickListene
     private fun notImplemented() {
         Toast.makeText(context, getString(R.string.feature_not_implemented), Toast.LENGTH_SHORT)
             .show()
+    }
+
+    override fun onFilterApply(selectedPriceFilter: String) {
+
     }
 
 

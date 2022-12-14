@@ -36,6 +36,7 @@ class LoginFragment : BaseFragment() {
         setupViewModel()
         binding.btnLogin.setOnClickListener{
             //TODO:: remove this when login API done and un comment doLogin()
+            mPreferenceProvider?.setValue(Constant.IS_USER_LOGIN, true)
             startActivity(Intent(context, HomeActivity::class.java))
             activity?.finish()
 

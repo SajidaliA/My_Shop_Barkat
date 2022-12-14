@@ -1,5 +1,6 @@
 package com.peacetechsolution.myshopbarkat.ui.main.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.peacetechsolution.myshopbarkat.data.source.network.NetworkResult
 import com.peacetechsolution.myshopbarkat.databinding.FragmentProductsBinding
 import com.peacetechsolution.myshopbarkat.ui.base.BaseFragment
 import com.peacetechsolution.myshopbarkat.ui.main.adapter.ProductAdapter
+import com.peacetechsolution.myshopbarkat.ui.main.view.activity.ProductDetailActivity
 import com.peacetechsolution.myshopbarkat.ui.main.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,12 +28,6 @@ ProductFragment : BaseFragment() {
     private var photos: ArrayList<Product> = ArrayList()
     private val homeViewModel: HomeViewModel by viewModels()
     private var loadMore: Boolean = false
-
-    private var adapterClickCallbacks = object : ProductAdapter.ClickListener {
-        override fun itemClick(position: Int) {
-            Toast.makeText(context, "$position is clicked", Toast.LENGTH_SHORT).show()
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +53,7 @@ ProductFragment : BaseFragment() {
             photos,
             object : ProductAdapter.ClickListener {
                 override fun itemClick(position: Int) {
-                    // add/replace adapter here
+                    startActivity(Intent(context, ProductDetailActivity::class.java))
                 }
             }
         )

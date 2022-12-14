@@ -1,5 +1,6 @@
 package com.peacetechsolution.myshopbarkat.ui.main.view.activity
 
+import android.content.Intent
 import android.os.Bundle
 import com.peacetechsolution.myshopbarkat.R
 import com.peacetechsolution.myshopbarkat.databinding.ActivityLandingBinding
@@ -22,8 +23,10 @@ class LandingActivity : BaseActivity() {
         setContentView(binding.root)
         setStatusBarColor(R.color.landingStatusBar)
         if (mPreferenceProvider.getBooleanValue(Constant.IS_USER_LOGIN, false)) {
+            startActivity(Intent(this@LandingActivity, HomeActivity::class.java))
+            finish()
             if (mPreferenceProvider.getBooleanValue(Constant.IS_LOCATION_FETCHED, false)){
-//                 startActivity(Intent(this@LandingActivity, HomeActivity::class.java))
+
                   this@LandingActivity.finish()
             }else{
 //                addReplaceFragmentWithAnimation(

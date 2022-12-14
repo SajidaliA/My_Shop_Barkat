@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.view.activity.AccountActivity">
+
+    <FrameLayout
+        android:id="@+id/container_account"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="1dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_profile_pic"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/main_border_bg_round"
+        android:padding="@dimen/_12sdp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPersonalDetails"
+        style="@style/black10"
+        android:layout_width="0dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/personal_details"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_pic"
+        tools:text="Personal Details" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEdit"
+        style="@style/black10alpha7"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/edit"
+        android:clickable="true"
+        android:focusable="true"
+        android:drawableTint="@color/colorPrimary"
+        android:drawablePadding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tvPersonalDetails"
+        android:background="@drawable/ripple_with_corner"
+        android:drawableStart="@drawable/ic_edit"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameLabel"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Momin Manjur Ahemad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
+        tools:text="Momin Manjur Ahemad" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEmailLabel"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEmail"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="barkatcomputercenter@gmail.com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+        tools:text="barkatcomputercenter@gmail.com" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMobileNoLabel"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/contact_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMobileNo"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="7436009800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMobileNoLabel"
+        tools:text="7436009800" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDOBLabel"
+        style="@style/black10alpha7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/dob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMobileNo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDOB"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="22/09/1989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDOBLabel"
+        tools:text="22/09/1989" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOther"
+        style="@style/black10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/other"
+        android:background="@drawable/bottom_line"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDOB" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPurchases"
+        style="@style/black12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_with_corner"
+        android:padding="@dimen/_14sdp"
+        android:text="@string/purchases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOther" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:alpha="0.5"
+        android:rotation="-90"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/tvPurchases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPurchases" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

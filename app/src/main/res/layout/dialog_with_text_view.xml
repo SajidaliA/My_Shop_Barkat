@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_12sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAlertTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/black14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/alert_dialog_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/black12"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAlertTitle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintTop_toBottomOf="@id/tvDialog"
+        android:background="@drawable/main_solid_bg_red"
+        style="@style/white12"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:foreground="@drawable/ripple_button"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@id/btnSubmit"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginStart="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDialog"
+        android:background="@drawable/main_solid_bg"
+        style="@style/white12"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        android:foreground="@drawable/ripple_button"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

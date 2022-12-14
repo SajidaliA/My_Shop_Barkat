@@ -2,6 +2,7 @@ package com.peacetechsolution.myshopbarkat.util
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
@@ -14,15 +15,20 @@ import android.os.SystemClock
 import android.util.TypedValue
 import android.view.*
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatEditText
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
+import androidx.core.content.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.peacetechsolution.myshopbarkat.R
+import com.peacetechsolution.myshopbarkat.data.model.ProductCategory
 
 
 /**
