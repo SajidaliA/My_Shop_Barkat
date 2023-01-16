@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mData"
+            type="com.peacetechsolution.myshopbarkat.data.model.Offer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:foreground="@drawable/ripple_textview"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/main_border_with_white_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_banner"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover_placeholder"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGoArrow"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:alpha="0.5"
+            android:rotation="-90"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_veg_price"
+            style="@style/black12bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Offer on 22 Sep. for batteries"
+            app:layout_constraintEnd_toStartOf="@id/ivGoArrow"
+            app:layout_constraintStart_toEndOf="@+id/img_banner"
+            app:layout_constraintTop_toTopOf="@+id/img_banner" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_veg_name"
+            style="@style/black10alpha7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Beautiful cover with soft rubber, Rounded Corner, gold border with extra  Rounded Corner, gold border with extra  "
+            app:layout_constraintEnd_toStartOf="@id/ivGoArrow"
+            app:layout_constraintStart_toStartOf="@+id/textView_veg_price"
+            app:layout_constraintTop_toBottomOf="@+id/textView_veg_price" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -53,7 +53,6 @@ class HomeActivity : BaseActivity(){
                 R.id.bottom_nav_offers -> {
                     isHome = false
                     supportActionBar?.title = getString(R.string.offers)
-                    notImplemented()
                     addReplaceFragment(R.id.home_container, OfferFragment(), false,
                         addToBackStack = false
                     )

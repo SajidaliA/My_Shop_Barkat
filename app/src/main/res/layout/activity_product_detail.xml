@@ -4,177 +4,199 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.view.activity.ProductDetailActivity">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/arrow_back"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:padding="@dimen/_14sdp"
-        android:clickable="true"
-        android:focusable="true"
-        android:elevation="@dimen/_1sdp"
-        android:background="@drawable/ripple_round"
+    <FrameLayout
+        android:id="@+id/container_product_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="@dimen/_5sdp"
-        android:src="@drawable/ic_arrow"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="1dp"/>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager_images"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_250sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_250sdp"
-        android:paddingVertical="@dimen/_16sdp"
-        android:src="@drawable/cover_placeholder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.main.view.activity.ProductDetailActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvProductName"
-        style="@style/black16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="Redmi not 9 pro max Cover"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_pager_images" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_back"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/ripple_round"
+                android:clickable="true"
+                android:elevation="@dimen/_1sdp"
+                android:focusable="true"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvProductPrice"
-        style="@style/black16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:text="\u20B9 150"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_images"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:paddingVertical="@dimen/_16sdp"
+                android:src="@drawable/cover_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductName"
+                style="@style/black16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Redmi not 9 pro max Cover"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pager_images" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductPrice"
+                style="@style/black16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="\u20B9 150"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvDescription"
-        style="@style/black10alpha7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:text="This is the sample of product description This is the sample of product description This is the sample of product description This is the sample of product description "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProductPrice" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                style="@style/black10alpha7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="This is the sample of product description This is the sample of product description This is the sample of product description This is the sample of product description "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProductPrice" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvInStock"
-        style="@style/black14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="@string/in_stock"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInStock"
+                style="@style/black14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/in_stock"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
-    <View
-        android:id="@+id/view_line"
-        app:layout_constraintTop_toBottomOf="@id/tvInStock"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha="0.3"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:background="@color/colorPrimary"/>
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:alpha="0.3"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/tvInStock" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvReviews"
-        style="@style/black14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="@string/reviews"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_line" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReviews"
+                style="@style/black14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/reviews"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_line" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvNoReviews"
-        style="@style/black10alpha7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:text="No any reviews found"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvReviews" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoReviews"
+                style="@style/black10alpha7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="No any reviews found"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvReviews" />
 
-    <View
-        android:id="@+id/view_line2"
-        app:layout_constraintTop_toTopOf="@id/tvAddReview"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha="0.3"
-        android:background="@color/colorPrimary"/>
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="@id/tvAddReview" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvAddReview"
-        style="@style/black12"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/ripple_textview"
-        android:padding="@dimen/_12sdp"
-        android:text="@string/add_review"
-        android:layout_marginTop="@dimen/_12sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNoReviews" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddReview"
+                style="@style/black12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_textview"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/add_review"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNoReviews" />
 
-    <View
-        android:id="@+id/view_line3"
-        app:layout_constraintBottom_toBottomOf="@id/tvAddReview"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha="0.3"
-        android:background="@color/colorPrimary"/>
+            <View
+                android:id="@+id/view_line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/tvAddReview" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:alpha="0.5"
-        android:rotation="-90"
-        android:src="@drawable/ic_arrow_down"
-        app:layout_constraintBottom_toBottomOf="@id/tvAddReview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvAddReview" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:alpha="0.5"
+                android:rotation="-90"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@id/tvAddReview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAddReview" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOffer"
-        style="@style/white8bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_12sdp"
-        android:background="@drawable/main_solid_bg_round"
-        android:paddingHorizontal="@dimen/_10sdp"
-        android:paddingVertical="@dimen/_2sdp"
-        android:text="FLAT \u20b9 50 OFF"
-        app:layout_constraintBottom_toBottomOf="@+id/tvInStock"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvInStock" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOffer"
+                style="@style/white8bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/main_solid_bg_round"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="FLAT \u20b9 50 OFF"
+                app:layout_constraintBottom_toBottomOf="@+id/tvInStock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvInStock" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/btnBookInAdvance"
@@ -191,6 +213,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

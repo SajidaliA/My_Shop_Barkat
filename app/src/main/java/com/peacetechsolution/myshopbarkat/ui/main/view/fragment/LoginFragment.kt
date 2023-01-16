@@ -9,7 +9,10 @@ import com.peacetechsolution.myshopbarkat.R
 import com.peacetechsolution.myshopbarkat.databinding.FragmentLoginBinding
 import com.peacetechsolution.myshopbarkat.ui.base.BaseFragment
 import com.peacetechsolution.myshopbarkat.ui.main.view.activity.HomeActivity
-import com.peacetechsolution.myshopbarkat.util.*
+import com.peacetechsolution.myshopbarkat.util.Constant
+import com.peacetechsolution.myshopbarkat.util.invisible
+import com.peacetechsolution.myshopbarkat.util.isEmailValid
+import com.peacetechsolution.myshopbarkat.util.show
 
 
 class LoginFragment : BaseFragment() {
@@ -34,15 +37,14 @@ class LoginFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
-        binding.btnLogin.setOnClickListener{
-            //TODO:: remove this when login API done and un comment doLogin()
+        binding.btnLogin.setOnClickListener {
             mPreferenceProvider?.setValue(Constant.IS_USER_LOGIN, true)
             startActivity(Intent(context, HomeActivity::class.java))
             activity?.finish()
 
             //doLogin()
         }
-        binding.ivBack.setOnClickListener { activity?.onBackPressed() }
+        binding.ivBack.setOnClickListener { activity?.supportFragmentManager?.popBackStack() }
     }
 
     private fun setupViewModel() {
@@ -83,12 +85,6 @@ class LoginFragment : BaseFragment() {
 //                            Toast.LENGTH_SHORT
 //                        ).show()
 //                        mPreferenceProvider?.setValue(IS_USER_LOGIN, true)
-//                        it.addReplaceFragmentWithAnimation(
-//                            R.id.lending_container, GetLocationInfoFragment(),
-//                            addFragment = true,
-//                            addToBackStack = true,
-//                            R.anim.slide_in, R.anim.slide_out
-//                        )
 //                    } else {
 //                        binding.btnLogin.show()
 //                        binding.progressBar.hide()

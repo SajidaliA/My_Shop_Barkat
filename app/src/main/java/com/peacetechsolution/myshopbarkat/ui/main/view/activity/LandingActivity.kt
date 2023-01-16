@@ -25,18 +25,6 @@ class LandingActivity : BaseActivity() {
         if (mPreferenceProvider.getBooleanValue(Constant.IS_USER_LOGIN, false)) {
             startActivity(Intent(this@LandingActivity, HomeActivity::class.java))
             finish()
-            if (mPreferenceProvider.getBooleanValue(Constant.IS_LOCATION_FETCHED, false)){
-
-                  this@LandingActivity.finish()
-            }else{
-//                addReplaceFragmentWithAnimation(
-//                    R.id.lending_container, OnBoardLocationFragment(),
-//                    addFragment = true,
-//                    addToBackStack = true,
-//                    R.anim.slide_in, R.anim.slide_out
-//                )
-            }
-
         }
         binding.btnSignUp.setOnClickListener {
             addReplaceFragmentWithAnimation(

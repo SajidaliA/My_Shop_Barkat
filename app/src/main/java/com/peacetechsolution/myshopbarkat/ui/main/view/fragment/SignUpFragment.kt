@@ -1,69 +1,87 @@
 package com.peacetechsolution.myshopbarkat.ui.main.view.fragment
 
+import android.app.DatePickerDialog
 import android.os.Bundle
+import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.peacetechsolution.myshopbarkat.R
 import com.peacetechsolution.myshopbarkat.databinding.FragmentSignUpBinding
 import com.peacetechsolution.myshopbarkat.ui.base.BaseFragment
+import com.peacetechsolution.myshopbarkat.util.Constant
+import com.peacetechsolution.myshopbarkat.util.addReplaceFragmentWithAnimation
 import com.peacetechsolution.myshopbarkat.util.invisible
 import com.peacetechsolution.myshopbarkat.util.show
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SignUpFragment : BaseFragment() {
 
-    private lateinit var binding: FragmentSignUpBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var mBinding: FragmentSignUpBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSignUpBinding.inflate(layoutInflater, container, false)
-        return binding.root
+        mBinding = FragmentSignUpBinding.inflate(layoutInflater, container, false)
+        return mBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnSignUp.setOnClickListener {
+        mBinding.btnSignUp.setOnClickListener {
             doSignUp()
         }
-        binding.ivBack.setOnClickListener { activity?.onBackPressed() }
+        mBinding.ivBack.setOnClickListener { activity?.supportFragmentManager?.popBackStack() }
+        mBinding.tvDob.setOnClickListener {
+            datePickerDialog()
+        }
+
+    }
+
+    private fun datePickerDialog() {
+        val cal = Calendar.getInstance()
+
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+            mBinding.tvDob.text = simpleDateFormat.format(cal.timeInMillis)
+        }
+        context?.let { DatePickerDialog(it, dateSetListener, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)).show() }
     }
 
     private fun doSignUp() {
         when {
-            binding.etName.text.toString().isEmpty() -> {
-                binding.etName.error = getString(R.string.please_enter_name)
-                binding.etName.requestFocus()
+            mBinding.etName.text.toString().isEmpty() -> {
+                mBinding.etName.error = getString(R.string.please_enter_name)
+                mBinding.etName.requestFocus()
             }
 
-            binding.etMobile.text.toString().isEmpty() -> {
-                binding.etMobile.error = getString(R.string.please_enter_mobile_number)
-                binding.etMobile.requestFocus()
+            mBinding.etMobile.text.toString().isEmpty() -> {
+                mBinding.etMobile.error = getString(R.string.please_enter_mobile_number)
+                mBinding.etMobile.requestFocus()
             }
-            binding.etMobile.text.toString().length < 10 -> {
-                binding.etMobile.error = getString(R.string.please_enter_valid_mobile_number)
-                binding.etMobile.requestFocus()
+            mBinding.etMobile.text.toString().length < 10 -> {
+                mBinding.etMobile.error = getString(R.string.please_enter_valid_mobile_number)
+                mBinding.etMobile.requestFocus()
             }
-            binding.etPassword.text.toString().isEmpty() -> {
-                binding.etPassword.error = getString(R.string.please_enter_password)
-                binding.etPassword.requestFocus()
+            mBinding.etPassword.text.toString().isEmpty() -> {
+                mBinding.etPassword.error = getString(R.string.please_enter_password)
+                mBinding.etPassword.requestFocus()
             }
-            binding.etPassword.text.toString().length < 6 -> {
-                binding.etPassword.error = getString(R.string.password_must_be_at_least_6_characters)
-                binding.etPassword.requestFocus()
+            mBinding.etPassword.text.toString().length < 6 -> {
+                mBinding.etPassword.error = getString(R.string.password_must_be_at_least_6_characters)
+                mBinding.etPassword.requestFocus()
             }
 
             else -> {
-                binding.btnSignUp.invisible()
-                binding.progressBarSignUp.show()
-                firebaseSignUp(binding.etMobile.text.toString(), binding.etPassword.text.toString())
+                mBinding.btnSignUp.invisible()
+                mBinding.progressBarSignUp.show()
+                firebaseSignUp(mBinding.etMobile.text.toString(), mBinding.etPassword.text.toString())
             }
         }
     }
@@ -84,12 +102,12 @@ class SignUpFragment : BaseFragment() {
 //                        mPreferenceProvider?.setValue(USER_EMAIL_KEY, binding.etEmail.text.toString())
 //                        mPreferenceProvider?.setValue(MOBILE_NUMBER_KEY, binding.etMobile.text.toString())
 //                        mPreferenceProvider?.setValue(PASSWORD_KEY, binding.etPassword.text.toString())
-//                        activity?.addReplaceFragmentWithAnimation(
-//                            R.id.lending_container, LoginFragment(),
-//                            addFragment = true,
-//                            addToBackStack = true,
-//                            R.anim.slide_in, R.anim.slide_out
-//                        )
+                        activity?.addReplaceFragmentWithAnimation(
+                            R.id.lending_container, LoginFragment(),
+                            addFragment = true,
+                            addToBackStack = true,
+                            R.anim.slide_in, R.anim.slide_out
+                        )
 //                    } else {
 //                        binding.btnSignUp.show()
 //                        binding.progressBarSignUp.hide()

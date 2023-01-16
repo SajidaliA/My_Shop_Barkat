@@ -41,12 +41,11 @@
         android:background="@drawable/ripple_round"
         android:clickable="true"
         android:focusable="true"
-        android:padding="@dimen/_13sdp"
+        android:padding="@dimen/_14sdp"
         android:src="@drawable/ic_arrow"
         app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appCompatTextView3"
-        app:tint="@color/colorPrimary" />
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMain"
@@ -98,6 +97,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etMobile" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDob"
+            style="@style/editTextMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/dob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSignUp"
@@ -106,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/sign_up"
-            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDob" />
 
         <ProgressBar
             android:id="@+id/progressBarSignUp"

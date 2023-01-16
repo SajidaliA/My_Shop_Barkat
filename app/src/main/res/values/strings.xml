@@ -129,16 +129,20 @@
     <string name="last_6_months">Last 6 Months</string>
     <string name="last_1_year">Last 1 Year</string>
     <string name="show_all">Show All</string>
-    <string name="name">Name:</string>
-    <string name="email">Email:</string>
-    <string name="contact_no">Contact No.:</string>
-    <string name="dob">Date of Birth:</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="dob">Date of Birth</string>
     <string name="save">Save</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="product_details">Product Details</string>
     <string name="in_stock">In Stock</string>
     <string name="book_this_product">Book This Product</string>
     <string name="reviews">Customer Reviews</string>
     <string name="add_review">Add review</string>
+    <string name="enter_your_reviews_here">Enter your reviews here</string>
+    <string name="add_new_offer">Add new offer</string>
+    <string name="grab_this_offer">Grab this offer</string>
+    <string name="add_offer">ADD</string>
+    <string name="enter_proper_details_about_offer">Enter proper details about offer</string>
+    <string name="enter_offer_title">Enter offer title</string>
 </resources>
