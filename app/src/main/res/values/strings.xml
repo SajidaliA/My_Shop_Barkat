@@ -145,4 +145,7 @@
     <string name="add_offer">ADD</string>
     <string name="enter_proper_details_about_offer">Enter proper details about offer</string>
     <string name="enter_offer_title">Enter offer title</string>
+    <string name="bill">Bill</string>
+    <string name="generate_bill_for_customer">Generate bill for customer</string>
+    <string name="title_activity_bill">BillActivity</string>
 </resources>

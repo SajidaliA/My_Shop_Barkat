@@ -13,6 +13,7 @@ import com.peacetechsolution.myshopbarkat.databinding.FragmentHomeBinding
 import com.peacetechsolution.myshopbarkat.ui.base.BaseFragment
 import com.peacetechsolution.myshopbarkat.ui.main.adapter.CategoryPagerAdapter
 import com.peacetechsolution.myshopbarkat.ui.main.view.activity.AddItemActivity
+import com.peacetechsolution.myshopbarkat.ui.main.view.activity.BillActivity
 import com.peacetechsolution.myshopbarkat.util.Constant.SELECTION_TYPE
 import com.peacetechsolution.myshopbarkat.util.hide
 import com.peacetechsolution.myshopbarkat.util.show
@@ -107,6 +108,11 @@ class HomeFragment : BaseFragment(), BottomSheetPostSelection.OnTypeClickListene
             BottomSheetPostSelection.TYPE.Offer -> {
                 intent.putExtra(SELECTION_TYPE, BottomSheetPostSelection.TYPE.Offer.name)
                 notImplemented()
+            }
+            BottomSheetPostSelection.TYPE.Bill -> {
+                val billActivityIntent = Intent(context, BillActivity::class.java)
+                billActivityIntent.putExtra(SELECTION_TYPE, BottomSheetPostSelection.TYPE.Bill.name)
+                startActivity(billActivityIntent)
             }
         }
 

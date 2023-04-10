@@ -16,7 +16,7 @@ class BottomSheetPostSelection(var clickListener: OnTypeClickListener) :
     private lateinit var mBinding: BottomSheetPostSelectionBinding
 
     enum class TYPE {
-        Product, Offer
+        Product, Offer, Bill
     }
 
     companion object {
@@ -54,6 +54,11 @@ class BottomSheetPostSelection(var clickListener: OnTypeClickListener) :
             buttonClicked = true
             this@BottomSheetPostSelection.dismiss()
             clickListener.onClick(TYPE.Offer)
+        }
+        mBinding.clBill.setOnClickListener {
+            buttonClicked = true
+            this@BottomSheetPostSelection.dismiss()
+            clickListener.onClick(TYPE.Bill)
         }
     }
 
