@@ -68,31 +68,53 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblMobile"
+                style="@style/black10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/enter_mobile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etMobile"
                 style="@style/editTextMain"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:hint="@string/enter_mobile"
                 android:inputType="textEmailAddress"
                 android:text="@={viewModel.mobileNo}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/lblMobile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblPassword"
+                style="@style/black10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/enter_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etMobile" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etPassword"
                 style="@style/editTextMain"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:hint="@string/enter_password"
                 android:inputType="textPassword"
                 android:text="@={viewModel.password}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etMobile" />
+                app:layout_constraintTop_toBottomOf="@+id/lblPassword" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogin"

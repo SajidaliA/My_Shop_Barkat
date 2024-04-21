@@ -5,7 +5,6 @@ import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.peacetechsolution.myshopbarkat.R
-import com.peacetechsolution.myshopbarkat.util.isEmailValid
 import com.peacetechsolution.myshopbarkat.util.isMobileNoValid
 import com.peacetechsolution.myshopbarkat.util.isPasswordValid
 import dagger.hilt.android.lifecycle.HiltViewModel

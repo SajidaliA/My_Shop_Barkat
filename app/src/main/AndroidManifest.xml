@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.peacetechsolution.myshopbarkat">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -82,7 +85,6 @@
         <activity
             android:name=".ui.main.view.activity.IntroActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,7 +94,6 @@
         </activity>
         <activity
             android:name=".ui.main.view.activity.LandingActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".ui.main.view.activity.HomeActivity"
@@ -100,7 +101,6 @@
         <activity
             android:name=".ui.main.view.activity.AddItemActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         <provider
